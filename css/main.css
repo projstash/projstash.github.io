@@ -1,0 +1,407 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+/****** Importing Fonts ******/
+@font-face{
+	font-family: 'regular';
+	src: url('../fonts/brandontext-regular.ttf');
+}
+@font-face{
+	font-family: 'medium';
+	src: url('../fonts/brandontext-medium.ttf');
+}
+@font-face{
+	font-family: 'bold';
+	src: url('../fonts/brandontext-bold.ttf');
+}
+
+
+
+
+
+
+
+
+
+/****** General Styles ******/
+*{
+	box-sizing: border-box;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font-family: 'regular', sans-serif;
+	color: #fff;
+	/*overflow: hidden;*/
+}
+h2{
+	font-family: 'bold', sans-serif;
+	font-size: 4em;
+	line-height: 1.1em;
+	letter-spacing: -0.02em;
+	margin-bottom: 40px;
+}
+p{
+	font-family: 'regular', sans-serif;
+	font-size: 1.4em;
+	font-weight: 100;
+	letter-spacing: 0.02em;
+	line-height: 1.4em;
+	margin-bottom: 40px;
+}
+img, a {
+	vertical-align: middle;
+}
+a{
+	text-decoration: none;
+	color: #003062;
+}
+.container, .header-container{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	/*border: 1px solid black;*/
+}
+.container{
+	height: 100%;
+}
+.half{
+	width: 50%;
+	float: left;
+}
+.half.right{
+	float: right;
+}
+.clear{
+	content: '';
+	display: table;
+	clear: both;
+	width: 100%;
+}
+.right-aligned{
+	text-align: right;
+}
+.button{
+	display: inline-block;
+	background: #fff;
+	border-radius: 4px;
+	padding: 14px 24px;
+}
+.button img{
+	height: 1.4em;
+	margin-right: 20px;
+}
+.button:hover{
+	box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
+.relative{
+	position: relative;
+}
+.left-padded{
+	padding-left: 40px;
+}
+.right-padded{
+	padding-right: 40px;
+}
+ul{
+	list-style: disc;
+	margin-left: 20px;
+	margin-bottom: 40px;
+}
+li{
+	padding: 10px;
+	font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+/****** Background Styles *****/
+.background{
+	background: #2B99F1; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(left top, #07FFFB, #3B43FF);
+  	background: -o-linear-gradient(bottom right, #07FFFB, #3B43FF);
+  	background: -moz-linear-gradient(bottom right, #07FFFB, #3B43FF);
+  	background: linear-gradient(to bottom right, #07FFFB, #3B43FF);
+  	background-repeat: no-repeat;
+  	background-position: right top;
+    background-attachment: fixed;
+}
+/*.bubbles{
+	position: fixed;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	z-index: -5;
+}*/
+.bg-scrolled .bubbles{
+	opacity: 1;
+}
+ul.bubbles li{
+	display: block;
+	position: fixed;
+	background: rgba(255,255,255,0.1);
+	z-index: -5;
+	border-radius: 50%;
+}
+ul.bubbles li:nth-child(1){
+	width: 300px;
+	height: 300px;
+	top: 50%;
+	left: 10%;
+}
+ul.bubbles li:nth-child(2){
+	width: 200px;
+	height: 200px;
+	top: 10%;
+	left: 50%;
+}
+ul.bubbles li:nth-child(3){
+	width: 100px;
+	height: 100px;
+	top: 40%;
+	left: 80%;
+}
+ul.bubbles li:nth-child(4){
+	width: 200px;
+	height: 200px;
+	top: 60%;
+	left: 60%;
+}
+ul.bubbles li:nth-child(5){
+	width: 200px;
+	height: 200px;
+	top: 80%;
+	left: 80%;
+}
+
+
+
+
+
+
+
+
+
+/******* Header Styles *******/
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100px;
+	color: #fff;
+	vertical-align: middle;
+	z-index: 10;
+}
+header a{
+	color: #fff;
+	display: inline-block;
+	padding: 20px 0;
+	line-height: 1.4em;
+}
+header a:hover{
+	opacity: 0.6;
+}
+.logo a{
+	font-family: 'bold', sans-serif;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+.logo img{
+	margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+/******* Sections Styles ******/
+section{
+	width: 100%;
+	height: 100%;
+	padding-top: 10%;
+	/*border: 1px solid red;*/
+}
+.section-img{
+	z-index: -1;
+	margin-top: 200px;
+	opacity: 0;
+}
+.text{
+	margin-top: 200px;
+	opacity: 0;
+}
+.home .section-img, .home .text{
+	margin-top: 0;
+	opacity: 1;
+}
+.left-padded{
+	padding-top: 40px;
+}
+/*.smile .relative{
+	min-height: 100px;
+}
+.smile .section-img img{
+	position: absolute;
+	top: 0;
+	left: -50px;
+}*/
+.onepage-pagination{
+	position: fixed;
+	top: 38%;
+	right: 10px;
+	display: none;
+}
+
+
+
+
+
+
+
+@media(max-width: 1280px){
+	section{
+		padding-top: 80px;
+	}
+	.smile .right-padded, .smile .left-padded{
+		padding-top: 0;
+	}
+}
+
+
+
+
+
+
+
+
+@media(max-width: 720px){
+	.half{
+		width: 100%;
+	}
+	header .half{
+		width: 50%;
+		padding: 0 20px;
+	}
+	section{
+		padding: 20px;
+		padding-top: 14%;
+		/*border: 1px solid red;*/
+		text-align: center;
+	}
+	h2{
+		font-size: 2.4em;
+		margin-bottom: 20px;
+	}
+	p{
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+	.section-img img{
+		width: 60%;
+	}
+	.left-padded{
+		padding-left: 0;
+	}
+	.right-padded{
+		padding-right: 0;
+	}
+	.smile .section-img img{
+		position: static;
+	}
+	ul{
+		margin-bottom: 20px;
+	}
+	ul li{
+		padding: 5px;
+		display: inline-block;
+	}
+	.new-way, .three-times{
+		padding-top: 100px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
